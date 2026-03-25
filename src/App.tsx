@@ -11,6 +11,8 @@ import { Home } from './pages/Home';
 import { Reviews } from './pages/Reviews';
 import { Results } from './pages/Results';
 import { NotFound } from './pages/NotFound';
+import { TermsOfService } from './pages/TermsOfService';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { SplashScreen } from './components/SplashScreen';
 
 function ScrollToHash() {
@@ -44,6 +46,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

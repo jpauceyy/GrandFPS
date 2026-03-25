@@ -1,42 +1,14 @@
+import { Link } from 'react-router-dom';
 import { Twitter, Linkedin } from 'lucide-react';
 import { DiscordIcon } from './DiscordIcon';
 import { Button } from './Button';
-import { useEffect, useRef, useState } from 'react';
 
 export function Footer() {
-  const [footerHeight, setFooterHeight] = useState(500);
-  const [isShortScreen, setIsShortScreen] = useState(false);
-  const footerRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const updateHeight = () => {
-      if (footerRef.current) {
-        const height = footerRef.current.offsetHeight;
-        setFooterHeight(height);
-        setIsShortScreen(height > window.innerHeight);
-      }
-    };
-
-    // Initial check
-    setTimeout(updateHeight, 100);
-    window.addEventListener('resize', updateHeight);
-    return () => window.removeEventListener('resize', updateHeight);
-  }, []);
-
   return (
     <>
-      {/* Spacer to allow scrolling past the fixed footer (only if not short screen) */}
-      {!isShortScreen && <div style={{ height: `${footerHeight}px` }} className="w-full pointer-events-none" />}
-      
-      {/* Fixed footer that gets revealed */}
-      <div 
-        className={`${isShortScreen ? 'relative' : 'fixed bottom-0 left-0 z-0'} w-full`}
-        style={{ height: isShortScreen ? 'auto' : `${footerHeight}px` }}
+      <footer 
+        className="bg-black relative overflow-hidden flex flex-col justify-between min-h-[500px]"
       >
-        <footer 
-          ref={footerRef}
-          className="bg-black relative overflow-hidden flex flex-col justify-between h-full min-h-[500px]"
-        >
           {/* Background Elements */}
           <div className="absolute inset-0 flex items-end justify-center pointer-events-none overflow-hidden">
             <svg 
@@ -89,14 +61,13 @@ export function Footer() {
               </div>
 
               <div className="flex items-center justify-center md:justify-end gap-6 md:w-1/3">
-                <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
-                <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Policy</a>
+                <Link to="/terms" className="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</Link>
+                <Link to="/privacy" className="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</Link>
                 <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Pricing</a>
               </div>
             </div>
           </div>
         </footer>
-      </div>
     </>
   );
 }
