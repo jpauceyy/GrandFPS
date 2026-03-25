@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-color: #000500;
+  --light-color: rgba(0, 255, 127, 0.5);
+  --glow-color-1: rgba(0, 255, 127, 0.4);
+  --glow-color-2: rgba(0, 191, 255, 0.3);
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-dark: #003319;
+  --color-brand-accent: #00ff7f;
+  --color-brand-glow: rgba(0, 255, 127, 0.5);
+  --color-brand-light: #3cff9d;
+  
+  --color-bg-base: #000500;
+  --color-bg-surface: #001a0d;
+  --color-bg-surface-hover: #002b16;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-[var(--color-bg-base)] text-gray-300 font-sans antialiased selection:bg-brand-accent selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-white;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px var(--color-brand-glow);
+  }
+  
+  .box-glow {
+    box-shadow: 0 0 30px -10px var(--color-brand-glow);
+  }
+  
+  .box-glow-strong {
+    box-shadow: 0 0 40px -5px var(--color-brand-glow);
+  }
+  
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg-base;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-dark rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brand-accent;
+}
+
+/* Animations */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 60s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.mask-edges {
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  0%,100% {
+    opacity: 0;
+  }
+  5%,80% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes floorGlow {
+  0%,100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes mainGlow {
+  from {
+    opacity: 0.6;
+    filter: blur(25px);
+  }
+  to {
+    opacity: 0.8;
+    filter: blur(15px);
+  }
+}
+
+@keyframes moveGrid {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -80px -40px;
+  }
+}
+
+/* Aurora Background Classes */
+.scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.scene::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, rgba(0, 255, 127, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0, 255, 127, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveGrid 15s linear infinite;
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 20%, transparent 80%);
+  pointer-events: none;
+}
+
+.floor {
+  position: absolute;
+  bottom: 0%;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, var(--glow-color-1) 0%, transparent 30%);
+  transform: scaleY(0.5);
+  animation: floorGlow 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.main-column {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20vw;
+  height: 100%;
+  background: linear-gradient(to top, var(--glow-color-2), transparent);
+  filter: blur(20px);
+  animation: mainGlow 3s alternate infinite;
+  pointer-events: none;
+}
+
+.light-stream-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.light-beam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to top, transparent, var(--light-color), transparent);
+  opacity: 0;
+  animation-name: rise, fade;
+  animation-timing-function: linear, linear;
+  animation-iteration-count: infinite, infinite;
+}
+
+.footer-text-outline {
+  fill: transparent;
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 2px;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1), fill 2s cubic-bezier(0.4, 0, 0.2, 1), stroke 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+footer:hover .footer-text-outline {
+  stroke-dashoffset: 0;
+  fill: rgba(255, 255, 255, 0.02);
+  stroke: rgba(0, 255, 127, 0.3); /* brand accent */
+}
