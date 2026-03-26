@@ -293,7 +293,7 @@ export function Home() {
                 className={`glass-panel rounded-3xl p-8 relative flex flex-col hover:z-10 transition-all duration-300 ${tier.popular ? 'border-brand-accent box-glow-strong transform lg:-translate-y-4' : ''}`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-accent text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-accent text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
                     Most Popular
                   </div>
                 )}

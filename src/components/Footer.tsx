@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Twitter, Linkedin } from 'lucide-react';
+import { Twitter } from 'lucide-react';
 import { DiscordIcon } from './DiscordIcon';
 import { Button } from './Button';
 
@@ -52,11 +52,8 @@ export function Footer() {
                 <a href="https://discord.gg/AwJvZREy" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
                   <DiscordIcon className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-white transition-colors">
+                <a href="https://x.com/GrandFPS" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
                   <Twitter className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-gray-500 hover:text-white transition-colors">
-                  <Linkedin className="w-5 h-5" />
                 </a>
               </div>
 
