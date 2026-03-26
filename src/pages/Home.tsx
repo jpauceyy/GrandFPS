@@ -26,9 +26,9 @@ export function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32 min-h-[90vh] flex items-center">
         <BackgroundScene beamCount={60} />
-        
+
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
@@ -38,23 +38,23 @@ export function Home() {
               <Zap className="w-4 h-4" />
               <span>The Ultimate PC Optimization Service</span>
             </motion.div>
-            
+
             <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 text-glow">
               Unlock Maximum <br className="hidden md:block" />
               <span className="text-brand-accent">FPS & Performance</span>
             </motion.h1>
-            
+
             <motion.p variants={fadeIn} className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Experience zero input delay, higher framerates, and buttery smooth gameplay. 
+              Experience zero input delay, higher framerates, and buttery smooth gameplay.
               Professional PC tuning trusted by top competitive players.
             </motion.p>
-            
+
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="https://calendly.com/grandziefps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50 bg-brand-accent text-white hover:bg-brand-light hover:box-glow h-14 px-8 text-lg w-full sm:w-auto"
+                className="inline-flex items-center justify-center rounded-md font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50 bg-brand-accent text-black hover:bg-brand-light hover:box-glow h-14 px-8 text-lg w-full sm:w-auto"
               >
                 Book Optimization <ArrowRight className="ml-2 w-5 h-5" />
               </a>
@@ -75,41 +75,41 @@ export function Home() {
         <div className="relative flex overflow-hidden mask-edges w-full">
           <div className="flex animate-marquee w-max hover:[animation-play-state:paused]">
             <div className="flex gap-6 pr-6">
-                {[...Array(6)].map((_, i) => (
-                  <div key={`set1-${i}`} className="glass-panel p-6 rounded-2xl w-[300px] flex-shrink-0 inline-block">
-                    <div className="flex items-center gap-1 mb-3 text-brand-accent">
-                      {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-current" />)}
-                    </div>
-                    <p className="text-gray-300 text-sm mb-4 whitespace-normal">"Insane difference. My 1% lows are so much better and the game feels incredibly responsive now."</p>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-brand-dark border border-brand-accent/30" />
-                      <div>
-                        <p className="text-white text-sm font-medium">ProPlayer{i + 1}</p>
-                        <p className="text-gray-500 text-xs">Valorant Radiant</p>
-                      </div>
+              {[...Array(6)].map((_, i) => (
+                <div key={`set1-${i}`} className="glass-panel p-6 rounded-2xl w-[300px] flex-shrink-0 inline-block">
+                  <div className="flex items-center gap-1 mb-3 text-brand-accent">
+                    {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-current" />)}
+                  </div>
+                  <p className="text-gray-300 text-sm mb-4 whitespace-normal">"Insane difference. My 1% lows are so much better and the game feels incredibly responsive now."</p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-brand-dark border border-brand-accent/30" />
+                    <div>
+                      <p className="text-white text-sm font-medium">ProPlayer{i + 1}</p>
+                      <p className="text-gray-500 text-xs">Valorant Radiant</p>
                     </div>
                   </div>
-                ))}
-              </div>
-              <div className="flex gap-6 pr-6">
-                {[...Array(6)].map((_, i) => (
-                  <div key={`set2-${i}`} className="glass-panel p-6 rounded-2xl w-[300px] flex-shrink-0 inline-block">
-                    <div className="flex items-center gap-1 mb-3 text-brand-accent">
-                      {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-current" />)}
-                    </div>
-                    <p className="text-gray-300 text-sm mb-4 whitespace-normal">"Insane difference. My 1% lows are so much better and the game feels incredibly responsive now."</p>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-brand-dark border border-brand-accent/30" />
-                      <div>
-                        <p className="text-white text-sm font-medium">ProPlayer{i + 1}</p>
-                        <p className="text-gray-500 text-xs">Valorant Radiant</p>
-                      </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex gap-6 pr-6">
+              {[...Array(6)].map((_, i) => (
+                <div key={`set2-${i}`} className="glass-panel p-6 rounded-2xl w-[300px] flex-shrink-0 inline-block">
+                  <div className="flex items-center gap-1 mb-3 text-brand-accent">
+                    {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-current" />)}
+                  </div>
+                  <p className="text-gray-300 text-sm mb-4 whitespace-normal">"Insane difference. My 1% lows are so much better and the game feels incredibly responsive now."</p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-brand-dark border border-brand-accent/30" />
+                    <div>
+                      <p className="text-white text-sm font-medium">ProPlayer{i + 1}</p>
+                      <p className="text-gray-500 text-xs">Valorant Radiant</p>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
       </section>
 
       {/* About Section */}
@@ -117,7 +117,7 @@ export function Home() {
         <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#00ff7f1a_1px,transparent_1px),linear-gradient(to_bottom,#00ff7f1a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -129,7 +129,7 @@ export function Home() {
               <motion.p variants={fadeIn} className="text-gray-400 text-lg mb-8 leading-relaxed">
                 We don't just change a few Windows settings. We perform deep system-level optimizations, custom BIOS tuning, and debloating to ensure your hardware is running at its absolute peak potential.
               </motion.p>
-              
+
               <div className="space-y-6">
                 {[
                   { icon: Shield, title: 'Safe & Reliable', desc: 'No dangerous overclocks. We prioritize system stability.' },
@@ -148,8 +148,8 @@ export function Home() {
                 ))}
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -159,7 +159,7 @@ export function Home() {
               <div className="aspect-square rounded-3xl bg-gradient-to-br from-brand-dark to-bg-surface border border-brand-accent/20 p-8 relative overflow-hidden box-glow">
                 <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/tech/800/800?blur=2')] opacity-20 mix-blend-overlay" />
                 <div className="absolute inset-0 bg-gradient-to-t from-bg-base to-transparent" />
-                
+
                 {/* Abstract UI Elements */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-sm">
                   <div className="glass-panel p-6 rounded-2xl mb-4 transform -rotate-6 translate-x-4">
@@ -171,7 +171,7 @@ export function Home() {
                       <div className="w-3/4 h-full bg-red-500" />
                     </div>
                   </div>
-                  
+
                   <div className="glass-panel p-6 rounded-2xl transform rotate-3 -translate-x-4 border-brand-accent/50 box-glow relative z-10">
                     <div className="flex justify-between items-center mb-4">
                       <span className="text-brand-accent font-medium">Optimized Latency</span>
@@ -196,9 +196,9 @@ export function Home() {
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Real <span className="text-brand-accent">Results</span></h2>
             <p className="text-gray-400 text-lg">See the difference our optimization makes in actual benchmark tests.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -210,9 +210,9 @@ export function Home() {
               </div>
               <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black aspect-video">
                 {/* Placeholder for Before Benchmark Screenshot */}
-                <img 
-                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop" 
-                  alt="Before Benchmark" 
+                <img
+                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop"
+                  alt="Before Benchmark"
                   className="w-full h-full object-cover opacity-60 mix-blend-luminosity"
                   referrerPolicy="no-referrer"
                 />
@@ -231,7 +231,7 @@ export function Home() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -244,9 +244,9 @@ export function Home() {
               </div>
               <div className="relative rounded-2xl overflow-hidden border border-brand-accent/30 bg-black aspect-video">
                 {/* Placeholder for After Benchmark Screenshot */}
-                <img 
-                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop" 
-                  alt="After Benchmark" 
+                <img
+                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop"
+                  alt="After Benchmark"
                   className="w-full h-full object-cover opacity-90"
                   referrerPolicy="no-referrer"
                 />
@@ -280,11 +280,11 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { name: 'Fresh Windows Setup', price: '£15', desc: 'Package 1', features: ['Fresh Windows installation', 'Fresh Windows Setup', 'Driver setup & latency tweaks', 'Game, audio & network tuning', '(8G USB stick required)'] },
-              { name: 'Overclocking & BIOS', price: '£40', desc: 'Package 2', popular: true, features: ['CPU, GPU & RAM overclocking','BIOS tuning & firmware updates', 'Stability tests with sensor monitoring', '(USB stick required to update BIOS)'] },
+              { name: 'Overclocking & BIOS', price: '£40', desc: 'Package 2', popular: true, features: ['CPU, GPU & RAM overclocking', 'BIOS tuning & firmware updates', 'Stability tests with sensor monitoring', '(USB stick required to update BIOS)'] },
               { name: 'Full System Overhaul', price: '£50', desc: 'Package 3', features: ['Fresh Windows installation', 'Advanced CPU, GPU & RAM overclocking', 'Stability check under heavy load', '(8G USB stick required)'] },
               { name: 'Network Optimisation', price: '£20', desc: 'Package 4', features: ['Lower or stabilise ping', 'Packet loss and burst issues fixed', 'Router and PC network settings tuned', '(Router web interface required)'] }
             ].map((tier, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -314,11 +314,10 @@ export function Home() {
                   href="https://calendly.com/grandziefps"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center justify-center rounded-md font-medium transition-all h-11 px-6 w-full ${
-                    tier.popular 
-                      ? 'bg-brand-accent text-white hover:bg-brand-light hover:box-glow' 
+                  className={`inline-flex items-center justify-center rounded-md font-medium transition-all h-11 px-6 w-full ${tier.popular
+                      ? 'bg-brand-accent text-white hover:bg-brand-light hover:box-glow'
                       : 'bg-white/10 text-white hover:bg-white/20'
-                  }`}
+                    }`}
                 >
                   Book Now
                 </a>

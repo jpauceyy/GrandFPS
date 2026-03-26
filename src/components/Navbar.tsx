@@ -31,16 +31,14 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-500 ${
-        isScrolled ? 'pt-4 px-4' : 'pt-6 px-6'
-      }`}
-    >
-      <div 
-        className={`flex items-center justify-between transition-all duration-500 w-full ${
-          isScrolled 
-            ? 'max-w-5xl bg-bg-surface/80 backdrop-blur-lg border border-white/10 rounded-full py-3 px-6 shadow-[0_8px_32px_rgba(0,0,0,0.5)]' 
-            : 'max-w-7xl bg-transparent py-2 px-0 border-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-500 ${isScrolled ? 'pt-4 px-4' : 'pt-6 px-6'
         }`}
+    >
+      <div
+        className={`flex items-center justify-between transition-all duration-500 w-full ${isScrolled
+            ? 'max-w-5xl bg-bg-surface/80 backdrop-blur-lg border border-white/10 rounded-full py-3 px-6 shadow-[0_8px_32px_rgba(0,0,0,0.5)]'
+            : 'max-w-7xl bg-transparent py-2 px-0 border-transparent'
+          }`}
       >
         <Link to="/" className="flex items-center gap-3 group">
           <div className={`rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-105 ${isScrolled ? 'w-8 h-8' : 'w-12 h-12'}`}>
@@ -104,7 +102,7 @@ export function Navbar() {
               href="https://calendly.com/grandziefps"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50 bg-brand-accent text-white hover:bg-brand-light hover:box-glow h-12 px-6 text-base w-full mt-2"
+              className="inline-flex items-center justify-center rounded-xl font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50 bg-brand-accent text-black hover:bg-brand-light hover:box-glow h-12 px-6 text-base w-full mt-2"
             >
               Book Optimization
             </a>
