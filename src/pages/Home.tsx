@@ -20,6 +20,69 @@ const staggerContainer = {
   }
 };
 
+const REVIEWS = [
+  {
+    name: "Gibby",
+    date: "26/03/2026",
+    image: "/gibby.webp",
+    text: "Shoutout to Grand and the admin team, guys a wizard! My first proper PC for gaming and I had no clue but guy was able to easily explain everything he was doing and went the extra mile to make sure everything was how I wanted it with no issues. Man has a great skill set and great customer service skills, would highly recommend! Thanks again mate🤝"
+  },
+  {
+    name: "Cameron",
+    date: "26/03/2026",
+    image: "/Cameron.webp",
+    text: "Highly recommend Grand did an amazing job optimising my pc, gained 150fps! Wouldn’t recommend anyone else, cheap and reliable to!!"
+  },
+  {
+    name: "Johnson",
+    date: "26/03/2026",
+    image: "/johnson.webp",
+    text: "Top man. Dealt with everything rapid style very helpful and informative along the way. Admins Even helped recommending a prebuild for my budget. Got my build running buttery smooth. Easily 10%+ fps boost along side better latency and input. Cant recommend enough!"
+  },
+  {
+    name: "Kyro",
+    date: "19/03/2026",
+    image: "/kyro.webp",
+    text: "Amazing at what he does even tho we both knew my pc specs wouldn’t get much boost my game is way smoother my ping feels more balanced and hit reg feels way better small jump in fps but still seeing a massive difference in game where im getting more fps and a way smoother game This man is a wizard and so speedy when it comes to this stuff and the support from his team is super impressive highly recommended"
+  },
+  {
+    name: "Dan",
+    date: "3/19/2026",
+    image: "/dan.webp",
+    text: "Amazing at what he does even tho we both knew my pc specs wouldn’t get much boost my game is way smoother my ping feels more balanced and hit reg feels way better small jump in fps but still seeing a massive difference in game where im getting more fps and a way smoother game This man is a wizard and so speedy when it comes to this stuff and the support from his team is super impressive highly recommended"
+  },
+  {
+    name: "Rxwki",
+    date: "3/19/2026",
+    image: "/Rxwki.webp",
+    text: "Highly recommend Grand the guy is a rocket sorting stuff out and shoutout to his team aswell for helping out game feel so much better and hit reg is better 👌👌"
+  },
+  {
+    name: "Lien",
+    date: "3/19/2026",
+    image: "/lien.png",
+    text: "Massive shoutout to Grand the guy is a wizard! After countless hours of sorting my shit pc I've gone from averaging 90ish fps to 150 fps in game which i didn't even think was possible. game runs smoother, bullet reg feels nice and no more stutters due to following his tips. his team also helped me massively with my cpu as it was running at 100 degrees and I would of never knew how bad it was."
+  },
+  {
+    name: "Lanax",
+    date: "15/03/2026",
+    image: "/lax.webp",
+    text: "The goat has went and done it again @Grand┃Head Optimiser huge difference and my game and pc feels the best it’s ever been delighted with the results no complaints ever the guys just a magician didn’t think my pc would get any better🐐"
+  },
+  {
+    name: "OJ",
+    date: "06/03/2026",
+    image: "/oj.webp",
+    text: "Absolute legend @Grand┃Head Optimiser huge vouch! Made in game feel like a different game hit reg and packet burst issues gone and very smooth recommend to anyone looking for a opti top bloke"
+  },
+  {
+    name: "Poro",
+    date: "03/03/2026",
+    image: "/poro.webp",
+    text: "what a Chad, spent most of his afternoon working though my cursed PC sorted the game out so i could finaly play expo without being at 70 fps and also i got a fps increase thankyou my dude "
+  }
+];
+
 export function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -67,7 +130,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* Reviews Slider (Simplified for now) */}
+      {/* Reviews Slider */}
       <section className="py-12 border-y border-white/5 bg-bg-surface/50 overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl mb-8">
           <p className="text-center text-sm font-medium text-gray-500 uppercase tracking-widest">Trusted by 100+ Gamers</p>
@@ -75,34 +138,17 @@ export function Home() {
         <div className="relative flex overflow-hidden mask-edges w-full">
           <div className="flex animate-marquee w-max hover:[animation-play-state:paused]">
             <div className="flex gap-6 pr-6">
-              {[...Array(6)].map((_, i) => (
-                <div key={`set1-${i}`} className="glass-panel p-6 rounded-2xl w-[300px] flex-shrink-0 inline-block">
+              {[...REVIEWS, ...REVIEWS].map((review, i) => (
+                <div key={`${review.name}-${i}`} className="glass-panel p-6 rounded-2xl w-[300px] flex-shrink-0">
                   <div className="flex items-center gap-1 mb-3 text-brand-accent">
                     {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-current" />)}
                   </div>
-                  <p className="text-gray-300 text-sm mb-4 whitespace-normal">"Shoutout to Grand┃Head Optimiser and the admin team, guys a wizard! My first proper PC for gaming and I had no clue but guy was able to easily explain everything he was doing and went the extra mile to make sure everything was how I wanted it with no issues. Man has a great skill set and great customer service skills, would highly recommend! Thanks again mate🤝"</p>
+                  <p className="text-gray-300 text-sm mb-4 whitespace-normal line-clamp-6">"{review.text}"</p>
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-brand-dark border border-brand-accent/30" />
+                    <img className="w-8 h-8 rounded-full border border-brand-accent/30" src={review.image} alt={review.name} />
                     <div>
-                      <p className="text-white text-sm font-medium">ProPlayer{i + 1}</p>
-                      <p className="text-gray-500 text-xs">Valorant Radiant</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="flex gap-6 pr-6">
-              {[...Array(6)].map((_, i) => (
-                <div key={`set2-${i}`} className="glass-panel p-6 rounded-2xl w-[300px] flex-shrink-0 inline-block">
-                  <div className="flex items-center gap-1 mb-3 text-brand-accent">
-                    {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-current" />)}
-                  </div>
-                  <p className="text-gray-300 text-sm mb-4 whitespace-normal">"Insane difference. My 1% lows are so much better and the game feels incredibly responsive now."</p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-brand-dark border border-brand-accent/30" />
-                    <div>
-                      <p className="text-white text-sm font-medium">ProPlayer{i + 1}</p>
-                      <p className="text-gray-500 text-xs">Valorant Radiant</p>
+                      <p className="text-white text-sm font-medium">{review.name}</p>
+                      <p className="text-gray-500 text-xs">{review.date}</p>
                     </div>
                   </div>
                 </div>
@@ -113,7 +159,7 @@ export function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-24 relative">
+      < section className="py-24 relative" >
         <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#00ff7f1a_1px,transparent_1px),linear-gradient(to_bottom,#00ff7f1a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -186,10 +232,10 @@ export function Home() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Before & After Benchmark Section */}
-      <section className="py-24 bg-bg-base relative border-t border-white/5">
+      < section className="py-24 bg-bg-base relative border-t border-white/5" >
         <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#00ff7f1a_1px,transparent_1px),linear-gradient(to_bottom,#00ff7f1a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -266,10 +312,10 @@ export function Home() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Pricing Section */}
-      <section id="services" className="py-24 bg-bg-surface relative">
+      < section id="services" className="py-24 bg-bg-surface relative" >
         <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#00ff7f1a_1px,transparent_1px),linear-gradient(to_bottom,#00ff7f1a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -325,10 +371,10 @@ export function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* FAQ Section */}
-      <section id="faq" className="py-24 bg-bg-surface relative">
+      < section id="faq" className="py-24 bg-bg-surface relative" >
         <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#00ff7f1a_1px,transparent_1px),linear-gradient(to_bottom,#00ff7f1a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         <div className="container mx-auto px-6 max-w-3xl relative z-10">
           <div className="text-center mb-16">
@@ -371,7 +417,7 @@ export function Home() {
             ))}
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 }
