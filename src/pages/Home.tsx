@@ -80,7 +80,7 @@ export function Home() {
                   <div className="flex items-center gap-1 mb-3 text-brand-accent">
                     {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-current" />)}
                   </div>
-                  <p className="text-gray-300 text-sm mb-4 whitespace-normal">"Insane difference. My 1% lows are so much better and the game feels incredibly responsive now."</p>
+                  <p className="text-gray-300 text-sm mb-4 whitespace-normal">"Shoutout to Grand┃Head Optimiser and the admin team, guys a wizard! My first proper PC for gaming and I had no clue but guy was able to easily explain everything he was doing and went the extra mile to make sure everything was how I wanted it with no issues. Man has a great skill set and great customer service skills, would highly recommend! Thanks again mate🤝"</p>
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-brand-dark border border-brand-accent/30" />
                     <div>
