@@ -316,7 +316,7 @@ export function Home() {
                   rel="noopener noreferrer"
                   className={`inline-flex items-center justify-center rounded-md font-medium transition-all h-11 px-6 w-full ${tier.popular
                     ? 'bg-brand-accent text-black hover:bg-brand-light hover:box-glow'
-                    : 'bg-white/10 text-black hover:bg-white/20'
+                    : 'bg-white/10 text-white hover:bg-white/20'
                     }`}
                 >
                   Book Now

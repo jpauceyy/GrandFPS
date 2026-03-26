@@ -36,8 +36,8 @@ export function Navbar() {
     >
       <div
         className={`flex items-center justify-between transition-all duration-500 w-full ${isScrolled
-            ? 'max-w-5xl bg-bg-surface/80 backdrop-blur-lg border border-white/10 rounded-full py-3 px-6 shadow-[0_8px_32px_rgba(0,0,0,0.5)]'
-            : 'max-w-7xl bg-transparent py-2 px-0 border-transparent'
+          ? 'max-w-5xl bg-bg-surface/80 backdrop-blur-lg border border-white/10 rounded-full py-3 px-6 shadow-[0_8px_32px_rgba(0,0,0,0.5)]'
+          : 'max-w-7xl bg-transparent py-2 px-0 border-transparent'
           }`}
       >
         <Link to="/" className="flex items-center gap-3 group">
@@ -64,7 +64,7 @@ export function Navbar() {
             href="https://calendly.com/grandziefps"
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center justify-center rounded-full font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50 bg-brand-accent text-white hover:bg-brand-light hover:box-glow ${isScrolled ? 'h-9 px-5 text-sm' : 'h-10 px-6 text-sm'}`}
+            className={`inline-flex items-center justify-center rounded-full font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50 bg-brand-accent text-black hover:bg-brand-light hover:box-glow ${isScrolled ? 'h-9 px-5 text-sm' : 'h-10 px-6 text-sm'}`}
           >
             Book Optimization
           </a>
