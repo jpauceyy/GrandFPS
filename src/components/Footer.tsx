@@ -44,8 +44,9 @@ export function Footer() {
           {/* Bottom Bar */}
           <div className="relative z-10 border-t border-brand-accent bg-black">
             <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-6">
-              <p className="text-gray-500 text-sm md:w-1/3 text-center md:text-left">
-                © {new Date().getFullYear()} Grandzie FPS. All rights reserved.
+              <p className="text-gray-500 text-sm md:w-1/3 text-center md:text-left transition-all duration-300">
+                © {new Date().getFullYear()} Grandzie FPS. All rights reserved. <br className="md:hidden" />
+                <span className="md:ml-2">Crafted by <a href="https://jp-studio-rho.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-accent transition-colors font-medium underline decoration-brand-accent/30 underline-offset-4 decoration-1">JPStudio</a></span>
               </p>
               
               <div className="flex items-center justify-center gap-6 md:w-1/3">
