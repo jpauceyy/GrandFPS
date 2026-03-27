@@ -79,7 +79,7 @@ const REVIEWS = [
     name: "Poro",
     date: "03/03/2026",
     image: "/poro.webp",
-    text: "what a Chad, spent most of his afternoon working though my cursed PC sorted the game out so i could finaly play expo without being at 70 fps and also i got a fps increase thankyou my dude "
+    text: "What a Chad, spent most of his afternoon working though my cursed PC sorted the game out so i could finaly play expo without being at 70 fps and also i got a fps increase thankyou my dude "
   }
 ];
 
@@ -257,7 +257,7 @@ export function Home() {
               <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black aspect-video">
                 {/* Placeholder for Before Benchmark Screenshot */}
                 <img
-                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop"
+                  src="before.jpg"
                   alt="Before Benchmark"
                   className="w-full h-full object-cover opacity-60 mix-blend-luminosity"
                   referrerPolicy="no-referrer"
@@ -266,11 +266,11 @@ export function Home() {
                   <div className="flex justify-between items-end">
                     <div>
                       <p className="text-gray-400 text-sm mb-1 uppercase tracking-wider">Average FPS</p>
-                      <p className="text-4xl font-mono font-bold text-white">142</p>
+                      <p className="text-4xl font-mono font-bold text-white">244</p>
                     </div>
                     <div className="text-right">
                       <p className="text-gray-400 text-sm mb-1 uppercase tracking-wider">1% Lows</p>
-                      <p className="text-3xl font-mono font-bold text-red-400">45</p>
+                      <p className="text-3xl font-mono font-bold text-red-400">199</p>
                     </div>
                   </div>
                 </div>
@@ -291,7 +291,7 @@ export function Home() {
               <div className="relative rounded-2xl overflow-hidden border border-brand-accent/30 bg-black aspect-video">
                 {/* Placeholder for After Benchmark Screenshot */}
                 <img
-                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop"
+                  src="after.jpg"
                   alt="After Benchmark"
                   className="w-full h-full object-cover opacity-90"
                   referrerPolicy="no-referrer"
@@ -300,11 +300,11 @@ export function Home() {
                   <div className="flex justify-between items-end">
                     <div>
                       <p className="text-brand-accent/80 text-sm mb-1 uppercase tracking-wider">Average FPS</p>
-                      <p className="text-4xl font-mono font-bold text-brand-accent">285</p>
+                      <p className="text-4xl font-mono font-bold text-brand-accent">391</p>
                     </div>
                     <div className="text-right">
                       <p className="text-brand-accent/80 text-sm mb-1 uppercase tracking-wider">1% Lows</p>
-                      <p className="text-3xl font-mono font-bold text-brand-accent">190</p>
+                      <p className="text-3xl font-mono font-bold text-brand-accent">344</p>
                     </div>
                   </div>
                 </div>

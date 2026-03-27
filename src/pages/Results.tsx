@@ -23,12 +23,12 @@ const benchmarkResults = [
     before: {
       fps: "342",
       lows: "115",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop"
+      image: "before.jpg"
     },
     after: {
       fps: "585",
       lows: "290",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1000&auto=format&fit=crop"
+      image: "after.jpg"
     }
   },
   {
@@ -65,7 +65,7 @@ export function Results() {
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <div className="container mx-auto px-6 max-w-7xl">
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
@@ -81,7 +81,7 @@ export function Results() {
 
         <div className="space-y-24">
           {benchmarkResults.map((result, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -111,9 +111,9 @@ export function Results() {
                     <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium border border-red-500/30">Stock Settings</span>
                   </div>
                   <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black aspect-video">
-                    <img 
-                      src={result.before.image} 
-                      alt={`${result.game} Before Benchmark`} 
+                    <img
+                      src={result.before.image}
+                      alt={`${result.game} Before Benchmark`}
                       className="w-full h-full object-cover opacity-60 mix-blend-luminosity"
                       referrerPolicy="no-referrer"
                     />
@@ -144,9 +144,9 @@ export function Results() {
                     <span className="px-3 py-1 rounded-full bg-brand-accent/20 text-brand-accent text-sm font-medium border border-brand-accent/30">Grandzie Tuned</span>
                   </div>
                   <div className="relative rounded-2xl overflow-hidden border border-brand-accent/30 bg-black aspect-video">
-                    <img 
-                      src={result.after.image} 
-                      alt={`${result.game} After Benchmark`} 
+                    <img
+                      src={result.after.image}
+                      alt={`${result.game} After Benchmark`}
                       className="w-full h-full object-cover opacity-90"
                       referrerPolicy="no-referrer"
                     />
@@ -170,7 +170,7 @@ export function Results() {
         </div>
 
         {/* CTA */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
