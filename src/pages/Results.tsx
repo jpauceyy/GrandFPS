@@ -75,13 +75,13 @@ export function Results() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen pt-32 pb-24">
+    <div className="flex flex-col min-h-screen pt-32 md:pt-48 pb-24">
       <div className="container mx-auto px-6 max-w-7xl">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-20 md:mb-32"
         >
           <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-bold mb-6">
             Real <span className="text-brand-accent">Results</span>
