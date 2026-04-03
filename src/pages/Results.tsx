@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, MonitorPlay } from 'lucide-react';
+import { useState } from 'react';
+import { ImageModal } from '../components/ImageModal';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -62,6 +64,16 @@ const benchmarkResults = [
 ];
 
 export function Results() {
+  const [modalState, setModalState] = useState<{ isOpen: boolean; src: string; alt: string }>({
+    isOpen: false,
+    src: '',
+    alt: ''
+  });
+
+  const openLightbox = (src: string, alt: string) => {
+    setModalState({ isOpen: true, src, alt });
+  };
+
   return (
     <div className="flex flex-col min-h-screen pt-32 pb-24">
       <div className="container mx-auto px-6 max-w-7xl">
@@ -110,14 +122,17 @@ export function Results() {
                     <h3 className="text-xl font-bold text-gray-400">Before Optimization</h3>
                     <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium border border-red-500/30">Stock Settings</span>
                   </div>
-                  <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-black aspect-video">
+                  <button 
+                    onClick={() => openLightbox(result.before.image, `${result.game} Before Optimization - FPS: ${result.before.fps}`)}
+                    className="relative rounded-2xl overflow-hidden border border-white/10 bg-black aspect-video block w-full group/img cursor-zoom-in"
+                  >
                     <img
                       src={result.before.image}
                       alt={`${result.game} Before Benchmark`}
-                      className="w-full h-full object-cover opacity-60 mix-blend-luminosity"
+                      className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover/img:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6 text-left">
                       <div className="flex justify-between items-end">
                         <div>
                           <p className="text-gray-400 text-sm mb-1 uppercase tracking-wider">Average FPS</p>
@@ -129,7 +144,7 @@ export function Results() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </button>
                 </div>
 
                 {/* After */}
@@ -143,14 +158,17 @@ export function Results() {
                     <h3 className="text-xl font-bold text-white">After Optimization</h3>
                     <span className="px-3 py-1 rounded-full bg-brand-accent/20 text-brand-accent text-sm font-medium border border-brand-accent/30">Grandzie Tuned</span>
                   </div>
-                  <div className="relative rounded-2xl overflow-hidden border border-brand-accent/30 bg-black aspect-video">
+                  <button 
+                    onClick={() => openLightbox(result.after.image, `${result.game} After Optimization - FPS: ${result.after.fps}`)}
+                    className="relative rounded-2xl overflow-hidden border border-brand-accent/30 bg-black aspect-video block w-full group/img cursor-zoom-in"
+                  >
                     <img
                       src={result.after.image}
                       alt={`${result.game} After Benchmark`}
-                      className="w-full h-full object-cover opacity-90"
+                      className="w-full h-full object-cover opacity-90 group-hover/img:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6 text-left">
                       <div className="flex justify-between items-end">
                         <div>
                           <p className="text-brand-accent/80 text-sm mb-1 uppercase tracking-wider">Average FPS</p>
@@ -162,7 +180,7 @@ export function Results() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </button>
                 </div>
               </div>
             </motion.div>
@@ -183,16 +201,23 @@ export function Results() {
               Stop playing at a disadvantage. Get your PC professionally tuned and experience the game the way it was meant to be played.
             </p>
             <a
-              href="https://calendly.com/grandziefps"
+              href="https://discord.gg/DedaKmct"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-md font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50 bg-brand-accent text-white hover:bg-brand-light hover:box-glow h-14 px-8 text-lg"
             >
-              Book Your Optimization <ArrowRight className="ml-2 w-5 h-5" />
+              Book via Discord <ArrowRight className="ml-2 w-5 h-5" />
             </a>
           </div>
         </motion.div>
       </div>
+
+      <ImageModal 
+        isOpen={modalState.isOpen}
+        onClose={() => setModalState(prev => ({ ...prev, isOpen: false }))}
+        imageSrc={modalState.src}
+        altText={modalState.alt}
+      />
     </div>
   );
 }

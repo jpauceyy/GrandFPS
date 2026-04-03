@@ -61,12 +61,12 @@ export function Navbar() {
             </Link>
           ))}
           <a
-            href="https://calendly.com/grandziefps"
+            href="https://discord.gg/DedaKmct"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center justify-center rounded-full font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50 bg-brand-accent text-black hover:bg-brand-light hover:box-glow ${isScrolled ? 'h-9 px-5 text-sm' : 'h-10 px-6 text-sm'}`}
           >
-            Book Optimization
+            Book via Discord
           </a>
         </nav>
 
@@ -99,12 +99,12 @@ export function Navbar() {
               </Link>
             ))}
             <a
-              href="https://calendly.com/grandziefps"
+              href="https://discord.gg/DedaKmct"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent disabled:pointer-events-none disabled:opacity-50 bg-brand-accent text-black hover:bg-brand-light hover:box-glow h-12 px-6 text-base w-full mt-2"
             >
-              Book Optimization
+              Book via Discord
             </a>
           </motion.div>
         )}

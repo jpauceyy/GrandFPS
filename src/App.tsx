@@ -14,6 +14,7 @@ import { NotFound } from './pages/NotFound';
 import { TermsOfService } from './pages/TermsOfService';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { SplashScreen } from './components/SplashScreen';
+import { CookieNotice } from './components/CookieNotice';
 
 function ScrollToHash() {
   const { hash } = useLocation();
@@ -53,6 +54,7 @@ export default function App() {
         </main>
       </div>
       <Footer />
+      <CookieNotice />
     </Router>
   );
 }

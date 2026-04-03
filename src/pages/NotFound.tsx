@@ -67,7 +67,7 @@ export function NotFound() {
               variant="secondary" 
               size="lg" 
               className="w-full sm:w-auto" 
-              href="https://discord.gg/AwJvZREy" 
+              href="https://discord.gg/DedaKmct" 
               target="_blank" 
               rel="noopener noreferrer"
             >

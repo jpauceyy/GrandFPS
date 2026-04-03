@@ -35,7 +35,7 @@ export function Footer() {
             <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
               Get direct support, updates, and real-world tuning advice from people actually using Grandzie FPS.
             </p>
-            <Button variant="secondary" size="lg" className="w-full sm:w-auto" href="https://discord.gg/AwJvZREy" target="_blank" rel="noopener noreferrer">
+            <Button variant="secondary" size="lg" className="w-full sm:w-auto" href="https://discord.gg/DedaKmct" target="_blank" rel="noopener noreferrer">
               <DiscordIcon className="mr-2 w-5 h-5" />
               Join Discord Community
             </Button>
@@ -50,7 +50,7 @@ export function Footer() {
               </p>
               
               <div className="flex items-center justify-center gap-6 md:w-1/3">
-                <a href="https://discord.gg/AwJvZREy" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+                <a href="https://discord.gg/DedaKmct" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
                   <DiscordIcon className="w-5 h-5" />
                 </a>
                 <a href="https://x.com/GrandFPS" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">

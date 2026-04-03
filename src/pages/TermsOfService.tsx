@@ -74,7 +74,7 @@ export function TermsOfService() {
             <h2 className="text-xl font-bold text-white mb-3">8. Contact</h2>
             <p>
               If you have any questions about these Terms of Service, please reach out to us through our{' '}
-              <a href="https://discord.gg/AwJvZREy" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-white transition-colors">
+              <a href="https://discord.gg/DedaKmct" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:text-white transition-colors">
                 Discord community
               </a>.
             </p>
