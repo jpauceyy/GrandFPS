@@ -10,6 +10,7 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { Reviews } from './pages/Reviews';
 import { Results } from './pages/Results';
+import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
 import { TermsOfService } from './pages/TermsOfService';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
@@ -47,6 +48,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
